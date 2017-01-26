@@ -1,0 +1,107 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--body start-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">hygull.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/blogs/">Blogs</a></li>
+      <li><a href="#">Posts</a></li>
+      <li><a href="/aboutus/">About</a></li>
+      {{ login_url_link_as_list|safe }}
+      {{ logout_url_link_as_list|safe }}
+      <li><a href="/dtl_home/">Servirall</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row"><!--row1 start-->
+          <!--column1 start-->
+          <div class="col-md-2 text-center"><!--column1 start-->
+              <img src="https://gitlab.com/uploads/user/avatar/655271/avatar.png" class="img-circle" alt="Rishikesh" width="100%" height="100%"><br><br>
+
+
+                  <a onclick="window.open('https://www.facebook.com/rishikesh.agrawani', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');"><img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_social_media_social_network_facebook_logotype_network-32.png" class="img-circle" alt="Facebook" >
+                  </a>
+                  <a onclick="window.open('https://www.linkedin.com/in/rishikesh-agrawani-0358ba119?trk=nav_responsive_tab_profile', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+                  <img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_logotype_linkedin_logos-32.png" class="img-circle" alt="Linkedin" >
+                  </a>
+
+                  <a onclick="window.open('https://twitter.com/RishiAndCodeEx', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+                    <img src="
+                  https://cdn0.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_twitter_logotype_logo-32.png" class="img-circle" alt="Twitter" >
+                  </a>
+
+                  <a onclick="window.open('https://plus.google.com/u/0/113992208941719062433', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+                    <img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_logotype_logos_google_plus-32.png" class="img-circle" alt="Google+" >
+                  </a>
+                  <br>
+                  <hr>
+                  <h3 style="color:green;">Wow!!!</h3>
+                  <h4><a href='https://golang.org/' target="_blank">Go</a></h4>
+              <img src="https://s-media-cache-ak0.pinimg.com/originals/bc/75/22/bc75225ef044d29d1f2d1c051d9b8063.gif" class="img-circle" alt="Rishikesh" width="100%" height="100%">
+              <br>
+              <hr>
+              <a href='https://golang.org/doc/faq' target="_blank">Frequently asked questions</a>
+              <br><hr>
+              <a href='https://golang.org/dl/' target="_blank">Dowload Go comipler</a>
+          </div><!--column1 end-->
+
+          <!--column2 start-->
+          {% block row1_column2 %}
+
+          {% endblock %}
+          <!--column2 end-->
+
+        <!--column3 start-->
+                <div class="col-md-3 text-center">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                          <img src="http://efdreams.com/data_images/dreams/go/go-04.jpg"  class="img-circle" alt="Gologo" width="40%" height="40%" >
+                        </div>
+                        <div class="panel-body">
+                          <h6 style="color:green;font-family: tahoma;text-align: center;">Go is great. <br>It has Nice error handling concept, variable declaration syntaxes, concurrency and many more</h6>
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                     <img src="http://lerablog.org/wp-content/uploads/2013/12/Gophers.jpg" class="img-rounded" alt="Gophers" width="100%" height="100%">
+                     <hr>
+                     <span style="color:gray;font-size: 20px">References</span><br>
+                     <a href="https://www.gobyexample.com" target="_blank">gobyexample.com</a><br>
+                     <a href="https://www.tutorialspoint.com/go" target="_blank">tutorialspoint.com</a><br>
+                     <a href="https://www.dotnetperls.com/go" target="_blank">dotnetperls.com</a><br>
+                    
+                     <a href="https://tour.golang.org/welcome/1" target="_blank">Take a tour on Golang</a><br>
+                     <a href="https://talks.golang.org/2013/bestpractices.slide#1" target="_blank">Best practices on golang(slides)</a>
+                </div>
+        <!--column3 end-->
+          {% block next_link %}
+
+          {% endblock %}
+  </div><!--row1 end-->
+   {% block next %}
+
+   {% endblock %}
+</div><!--container1 end-->
+<!--body end-->
+</body>
+</html>

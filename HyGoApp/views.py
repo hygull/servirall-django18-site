@@ -86,6 +86,19 @@ def blogs(request):
 	
 	return render(request,"blogs.html",context)
 
+def posts(request):
+	title="Posts"
+	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
+	logout_url_link_as_list=""
+
+	if request.user.is_authenticated():
+		login_url_link_as_list=""
+		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
+
+	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list}
+	
+	return render(request,"posts.html",context)
+
 def aboutus(request):
 	title="Blog"
 	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
