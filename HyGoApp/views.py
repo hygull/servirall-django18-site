@@ -97,7 +97,7 @@ def posts(request):
 		login_url_link_as_list=""
 		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
 		posts=Post.objects.all()
-		print "Ok",posts
+		print "The posts available are as follows:\n",posts
 	else:
 		posts_message="<h1 style='color:green;textalign:center;'> No posts found. Please login to the protected posts.</h1>"
 	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts,"posts_message":posts_message}
