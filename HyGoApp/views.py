@@ -91,23 +91,22 @@ def posts(request):
 	title="Posts"
 	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
 	logout_url_link_as_list=""
-<<<<<<< HEAD
 	posts=""
+	posts_message=""
 	if request.user.is_authenticated():
 		login_url_link_as_list=""
 		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
 		posts=Post.objects.all()
+		print "Ok",posts
 	else:
-		posts+="No posts found"
-	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts}
-=======
+		posts_message="<h1 style='color:green;textalign:center;'> No posts found. Please login to the protected posts.</h1>"
+	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts,"posts_message":posts_message}
 
 	if request.user.is_authenticated():
 		login_url_link_as_list=""
 		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
 
-	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list}
->>>>>>> eacbbcddd1e503498e98c3633fa98121fd3fa120
+	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts,"posts_message":posts_message}
 	
 	return render(request,"posts.html",context)
 
