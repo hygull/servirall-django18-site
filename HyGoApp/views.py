@@ -91,6 +91,7 @@ def posts(request):
 	title="Posts"
 	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
 	logout_url_link_as_list=""
+<<<<<<< HEAD
 	posts=""
 	if request.user.is_authenticated():
 		login_url_link_as_list=""
@@ -99,6 +100,14 @@ def posts(request):
 	else:
 		posts+="No posts found"
 	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts}
+=======
+
+	if request.user.is_authenticated():
+		login_url_link_as_list=""
+		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
+
+	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list}
+>>>>>>> eacbbcddd1e503498e98c3633fa98121fd3fa120
 	
 	return render(request,"posts.html",context)
 
