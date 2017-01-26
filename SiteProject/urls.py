@@ -14,6 +14,7 @@ urlpatterns = [
 
     url(r"^blogs/$","HyGoApp.views.blogs",name="blogs"),
     url(r"^aboutus/$","HyGoApp.views.aboutus",name="aboutus"),
+    url(r"^posts/$","HyGoApp.views.posts",name="posts"),
 
     url(r"^dtl_home/$","HyGoApp.views.dtl_home",name="dtl_home"),
     url(r"^dtl_home/aboutus/$","HyGoApp.views.dtl_aboutus",name="servirall_aboutus"),

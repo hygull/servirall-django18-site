@@ -1,0 +1,16 @@
+{% extends "common.html" %}
+
+{% block row1_column2 %}
+	 <div class="col-md-7 text-center"><!--column2 start-->
+	 {% for post in posts %}
+			<div class='panel panel-success'>
+	 		<div class='panel-heading'>
+				<h4 style='font-weight: bold;'>{{ post.title }}</h4>
+			</div>
+			<div class='panel-body'>
+				<h5 style='font-family: sans-serif;'>{{ post.description }}</h5>
+			</div>
+		</div><!--panel ends-->
+	{% endfor %}
+	</div><!--column2 end-->
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
 from .forms import SignUpForm,LoginForm
+from .models import Post
 from django.core.mail import send_mail
 # Create your views here.
 def home(request):
@@ -85,6 +86,21 @@ def blogs(request):
 	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list}
 	
 	return render(request,"blogs.html",context)
+
+def posts(request):
+	title="Posts"
+	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
+	logout_url_link_as_list=""
+	posts=""
+	if request.user.is_authenticated():
+		login_url_link_as_list=""
+		logout_url_link_as_list="<li><a id='login' href='/admin/logout/'>Logout</a></li>"
+		posts=Post.objects.all()
+	else:
+		posts+="No posts found"
+	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts}
+	
+	return render(request,"posts.html",context)
 
 def aboutus(request):
 	title="Blog"
