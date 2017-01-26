@@ -1,0 +1,189 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--body start-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">hygull.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/blogs/">Blogs</a></li>
+      <li><a href="#">Posts</a></li>
+      <li><a href="#">About</a></li>
+      {{ login_url_link_as_list|safe }}
+      {{ logout_url_link_as_list|safe }}
+      <li><a href="/dtl_home/">Servirall</a></li>
+      <!-- <li><a id="logout" href="{{ logout_url }}">{{ logout }}</a></li> -->
+      <!-- <li><a id="login" href="{{ login_url }}">{{ login }}</a></li> -->
+      <!-- {{ a_link|safe }} -->
+    </ul>
+    <!-- <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form> -->
+  </div>
+</nav>
+<div class="container">
+<div class="row"><!--row1 start-->
+<!-- https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAeLAAAAJDQwYTQ2NmNlLWYzYTEtNDQxNi1hY2EyLTA3MWFlZDkyNDdjNw.jpg -->
+  <div class="col-md-2 text-center"><!--column1 start-->
+<!--   http://efdreams.com/data_images/dreams/go/go-04.jpg -->
+<img src="https://gitlab.com/uploads/user/avatar/655271/avatar.png" class="img-circle" alt="Rishikesh" width="100%" height="100%"><br><br>
+
+
+    <a onclick="window.open('https://www.facebook.com/rishikesh.agrawani', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');"><img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_social_media_social_network_facebook_logotype_network-32.png" class="img-circle" alt="Facebook" >
+    </a>
+    <a onclick="window.open('https://www.linkedin.com/in/rishikesh-agrawani-0358ba119?trk=nav_responsive_tab_profile', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+    <img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_logotype_linkedin_logos-32.png" class="img-circle" alt="Linkedin" >
+    </a>
+
+    <a onclick="window.open('https://twitter.com/RishiAndCodeEx', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+      <img src="
+    https://cdn0.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_twitter_logotype_logo-32.png" class="img-circle" alt="Twitter" >
+    </a>
+
+    <a onclick="window.open('https://plus.google.com/u/0/113992208941719062433', '_blank', 'location=yes,height=500,width=800,scrollbars=yes,status=yes');">
+      <img src="https://cdn4.iconfinder.com/data/icons/green-social-media-icons/744/social_media_social_network_logo_logotype_logos_google_plus-32.png" class="img-circle" alt="Google+" >
+    </a>
+    <br>
+    <hr>
+    <h3 style="color:green;">Wow!!!</h3>
+    <h4><a href='https://golang.org/' target="_blank">Go</a></h4>
+<img src="https://s-media-cache-ak0.pinimg.com/originals/bc/75/22/bc75225ef044d29d1f2d1c051d9b8063.gif" class="img-circle" alt="Rishikesh" width="100%" height="100%">
+
+<br>
+<hr>
+<a href='https://golang.org/doc/faq' target="_blank">Frequently asked questions</a>
+<br><hr>
+<a href='https://golang.org/dl/' target="_blank">Dowload Go comipler</a>
+
+  </div><!--column1 end-->
+
+                    <div class="col-md-7 text-center"><!--column2 start-->
+                    <!--For team image now-->
+                      <div>
+                          <div class="col-md-12">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                      <h4>Robert & Rob in a conference</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                    <img src="https://i.ytimg.com/vi/sln-gJaURzk/maxresdefault.jpg" class="img-rounded" alt="Robert" width="100%" height="100%"> 
+                                    </div>
+                                </div>
+                          </div>
+
+                           <div class="col-md-12 text center">
+                              <div class="panel panel-warning">
+                                <div class="panel panel-heading">
+                                  <h4>Intro of Golang's main developers in brief</h4>
+                                </div>
+                                <div class="panel-body">
+                                <!--Panels for legends bio-->
+                  <div class="row"><!--Panel row 1 starts-->
+                        <div class="col-md-4">
+                            <div class="panel panel-success">
+                              <div class="panel-heading"><h4>Robert Griesemer</h4></div>
+                                  <div class="panel-body">
+                                    <img src="http://www.computerhope.com/people/pictures/robert_griesemer.jpg" class="img-rounded" alt="Robert" width="100%" height="100%"> 
+                                      Computer Programmer who works at Google.
+                  One of the first designers of the Go (golang) programming language.
+                  Previously worked on code generation for Google's V8 JavaScript engine and Chubby.
+                  Worked on the Sawzall language, the Java HotSpot virtual machine, and the Strongtalk system.
+                                  </div>
+                              <div class="panel-footer">
+                                  <a href="http://www.wow.com/wiki/Robert_Griesemer" target="_blank">Find Robert on wow...</a>
+                              </div>
+                            </div>
+                        </div>
+                         <div class="col-md-4">
+                            <div class="panel panel-info">
+                              <div class="panel-heading"><h4>Rob Pike</h4></div>
+                                  <div class="panel-body">
+                                      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Rob-pike-oscon.jpg
+                  " class="img-rounded" alt="Rob" width="100%" height="100%">  -->
+                  <img src="http://gotocon.com/dl/2010/Web/Speakers/Rob%20Pike.jpg" class="img-rounded" alt="Rob" width="100%" height="100%">
+                  Robert "Rob" Pike (born 1956) is a Canadian programmer and author. He is best known for his work at Bell Labs, where he was a member of the Unix team and was involved in the creation of the Plan 9 from Bell Labs and Inferno operating systems, as well as the Limbo programming language.
+                                  </div>
+                              <div class="panel-footer"><a href="https://en.wikipedia.org/wiki/Rob_Pike" target="_blank">Find Rob on wiki...</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-success">
+                           
+                              <div class="panel-heading"><h4>Ken Thompson</h4></div>
+                                  <div class="panel-body">
+                                    <!-- <img src="http://core0.staticworld.net/images/idge/imported/imageapi/2014/10/08/15/slide_ken-thompson-620x465-100498409-gallery.idge.jpg" class="img-rounded" alt="Ken" width="100%" height="100%"> --> 
+                                    <img src="http://en.chessbase.com/portals/4/files/news/2011/thompson09.jpg" class="img-rounded" alt="Ken" width="100%" height="100%"> 
+                                    
+                                    Kenneth Lane "Ken" Thompson (born February 4, 1943), commonly referred to as ken in hacker circles,[1] is an American pioneer of computer science. Having worked at Bell Labs for most of his career, Thompson designed and implemented the original Unix operating system.
+                                  </div>
+                              <div class="panel-footer">
+                                  <a href="https://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Find Ken on wiki...</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div><!--Panel row 1 ends-->
+              <!--Panels for legends bio ends-->
+              </div>
+            </div>
+        </div>
+    </div>
+  </div><!--column2 end-->
+
+  <div class="col-md-3 text-center"><!--column3 start-->
+         <!--  <form method="POST"> {% csrf_token %}
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">SignUp</button>
+          </form> -->
+           <div class="panel panel-success">
+              <div class="panel-heading">
+                <img src="http://efdreams.com/data_images/dreams/go/go-04.jpg"  class="img-circle" alt="Gologo" width="40%" height="40%" >
+              </div>
+              <div class="panel-body">
+                <h6 style="color:green;font-family: tahoma;text-align: center;">Go is great. <br>It has Nice error handling concept, variable declaration syntaxes, concurrency and many more</h6>
+              </div>
+          </div>
+          <hr>
+           <img src="http://lerablog.org/wp-content/uploads/2013/12/Gophers.jpg" class="img-rounded" alt="Gophers" width="100%" height="100%">
+           <hr>
+           <span style="color:gray;font-size: 20px">References</span><br>
+           <a href="https://www.gobyexample.com" target="_blank">gobyexample.com</a><br>
+           <a href="https://www.tutorialspoint.com/go" target="_blank">tutorialspoint.com</a><br>
+           <a href="https://www.dotnetperls.com/go" target="_blank">dotnetperls.com</a><br>
+          
+           <a href="https://tour.golang.org/welcome/1" target="_blank">Take a tour on Golang</a><br>
+           <a href="https://talks.golang.org/2013/bestpractices.slide#1" target="_blank">Best practices on golang(slides)</a>
+  </div><!--column3 end-->
+  </div><!--row1 end-->
+ <ul class="pager text-center">
+    <li><a href="#">Next</a></li>
+  </ul>
+</div><!--container1 end-->
+<!--body end-->
+</body>
+</html>

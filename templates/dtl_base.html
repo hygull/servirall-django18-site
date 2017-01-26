@@ -1,0 +1,108 @@
+{% load staticfiles  %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Static Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet"> -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/navbar-static-top.css' %}" rel="stylesheet">
+    <!--Fonts-->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+</head>
+
+  <body>
+
+    <!-- Static navbar -->
+    {# Navbar stats here #}
+    {% include "dtl_navbar.html" %}
+    {# Navbar ends here#}
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+      <div class='row'>
+        <div class='col-xs-12 col-lg-8'>
+        <h1>Servirall <img src='http://www.flaticon.com/premium-icon/icons/svg/296/296494.svg' width='20%' height='20%' alt='mobile'>
+ <img src="https://cdn1.iconfinder.com/data/icons/medical-health-care-2-2/380/Medical_Supervision___Treatment-512.png" width="15%" height="15%" alt="hospital_bed_and_patient">
+  <img src="https://cdn1.iconfinder.com/data/icons/medical-vol-3/64/110-512.png" width="15%" height="15%" alt="">
+        </h1>
+        <p style='color:green'><i class="fa fa-plane fa-1x" aria-hidden="true"></i> &nbsp;&nbsp;Let me help you people!!!</p>
+        <p><i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+<span class="sr-only">Loading...</span>Get home services by not spending any extra money</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="https://www.google.co.in/search?q=comfort+images&espv=2&biw=1280&bih=726&source=lnms&tbm=isch&sa=X&sqi=2&ved=0ahUKEwinv6ern9_RAhWIpo8KHZ8jD2gQ_AUIBigB" target="_blank" role="button">Servirall is for your comfort <!-- &raquo; --></a>
+          <img src="https://cdn0.iconfinder.com/data/icons/medical-services-1/256/Female_Doctor-128.png" width="7%" height="7%" role="button" alt="doctor">
+          
+          <img src="https://cdn0.iconfinder.com/data/icons/healer-glyphs-volume-1/106/registration-reservation-admission-cashier-128.png" width="7%" height="7%" role="button" alt="hospital">
+          
+          <img src="https://cdn4.iconfinder.com/data/icons/school-education-3/256/Teacher-128.png" width="7%" height="7%" alt="teacher">
+        </p>
+        </div>
+        <div class='col-lg-4 col-xs-12'>
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+            <h4 style='text-align:center;'><i class="fa fa-sitemap" aria-hidden="true"></i> &nbsp;You can online</h4>
+            </div>
+            <div class="panel-body">
+              <a class="btn btn-block btn-primary" href="#" role="button"><i class="fa fa-user-plus fa-1x" aria-hidden="true"></i>&nbsp; Book a doctor</a>
+
+              <a class="btn btn-block btn-success" href="#" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp;Get Admission</a>
+
+              <a class="btn btn-block btn-primary" href="#" role="button"><i class="fa fa-cogs" aria-hidden="true"></i> &nbsp;Get Bank account details</a>
+
+              <a class="btn btn-block btn-success" href="#" role="button"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> &nbsp;Apply for ADHAAR Card</a>
+              <a class="btn btn-block btn-primary" href="#" role="button"><i class="fa fa-file-text" aria-hidden="true"></i> &nbsp;Send messages to mobile</a>
+              <a class="btn btn-block btn-success" href="#" role="button"><i class="fa fa-key" aria-hidden="true"></i> &nbsp;Apply for new SBI account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div> <!-- /container -->
+    <div class="container">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+    <div>
+    <footer>
+      <p class="text-center">
+        Copyright© 2017, Servirall<br/>
+        Bangalore,India
+      </p>
+    </footer>
+<!-- like/dislike buttons-->
+ 
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!--like dislike buttons end-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+    
+  </body>
+</html>

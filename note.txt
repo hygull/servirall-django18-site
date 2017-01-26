@@ -1,0 +1,6 @@
+Python : 2.7.12
+Django : 1.8
+
+I have included vir_env so that you had not to create & install the packages. It may take sometimes on the production & if the server is unable to install the packages in a specific time(for unpaid users) then there may be a problem.Basically we should not include vir_env directory to the source project.
+
+I have included this for minimizing the installation required at production.
