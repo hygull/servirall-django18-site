@@ -25,7 +25,7 @@ SECRET_KEY = 'y-&1aa_oy78jjcl8*^=b3_4^%tyb94b&cip&p^pgy#rbt7nm62'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 """CUSTOM SETTINGS FOR EMAIL"""
 EMAIL_HOST="smtp.gmail.com"

@@ -1,0 +1,67 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create a new post </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-color: black;
+    }
+    form label{
+      color:lightgreen;
+    }
+    strong {
+      color:white;
+    }
+    .form-group-has-error {
+      color:white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h3 class="text-center" style="color:lightgreen;">Create a new post</h3>
+  <center><span style="color: lightgreen">Click<span> &raquo; <a href="/" style='color:pink'>Golang</a>&nbsp;
+  <a href="/dtl_home/" style='color:pink'>Servirall</a></center>
+  <hr>
+      <div class="row">
+      <div class="col-lg-3 col-xs-12">
+          <a href='/'>  
+              <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Home-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="home">
+          </a><br><br>
+            
+            <a href="/posts/">
+            <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="note"><br><br>
+            </a>
+
+            <img src="https://cdn1.iconfinder.com/data/icons/business-13/6144/13-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="clock"><br><br>
+
+            <img src="https://cdn1.iconfinder.com/data/icons/babies-color/300/19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="mother"><br>
+      </div>
+      <div class="col-lg-6 col-xs-12">
+        <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
+            {{ form|crispy }}  <!--{{ form.as_p }}-->
+            <button type="submit" class="btn btn-primary btn-block"><h5> <i class="fa fa-thumbs-up" aria-hidden="true"></i> &nbsp;Post</h5></button>
+        </form>
+
+      </div> 
+
+            <div class="col-lg-3 col-xs-12 text-center">
+              <img src="https://cdn0.iconfinder.com/data/icons/seo-and-internet-marketing-1-1/512/22-512.png" class='img-responsive' width="50%" height="50%" role="button" alt="innovation"><br>
+            
+            <img src="https://cdn0.iconfinder.com/data/icons/purple-set/512/pen_markerpen_writer_ink-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="pen"><br>
+
+            <img src="https://cdn3.iconfinder.com/data/icons/humano2/128x128/apps/openofficeorg-writer.png" class='img-responsive' width="40%" height="40%" role="button" alt="pot"><br>
+            <img src="https://cdn1.iconfinder.com/data/icons/elevator/154/elevator-ventilation-climate-conditioner-air-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="ok"><br>
+        
+      </div> 
+      </div>
+    </div>
+</body>
+</html>

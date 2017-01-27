@@ -1,14 +1,21 @@
 {% extends "common.html" %}
 
 {% block row1_column2 %}
-	 <div class="col-md-7 text-center"><!--column2 start-->
+	 <div class="col-md-7"><!--column2 start-->
+	<!--  <center> <a class="btn btn-lg btn-info" href="/posts/create/" role="button"><h4><i class="fa fa-pencil fa-1x" aria-hidden="true"></i>&nbsp;Write a new post</h4></a></center><br> -->
 	 {% for post in posts %}
-			<div class='panel panel-success'>
+		<div class='panel panel-success'>
 	 		<div class='panel-heading'>
 				<h4 style='font-weight: bold;'>{{ post.title }}</h4>
 			</div>
+			<div class='panel-body' style='margin:0'>
+				<h5 style='font-family: sans-serif;margin:0'><pre styple='margin:0'>{{ post.description }}</pre></h5>
+			</div>
 			<div class='panel-body'>
-				<h5 style='font-family: sans-serif;'>{{ post.description }}</h5>
+			 <i class="fa fa-thumbs-up" aria-hidden="true"></i> &nbsp;  
+			 <i class="fa fa-thumbs-down" aria-hidden="true"></i> &nbsp;
+			 <i class="fa fa-comment" aria-hidden="true"></i> &nbsp;
+			 <i class="fa fa-share" aria-hidden="true"></i> &nbsp;
 			</div>
 		</div><!--panel ends-->
 	{% endfor %}

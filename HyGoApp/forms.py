@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import SignUp
+from .models import SignUp,Post
 
 import re
 
@@ -45,6 +45,27 @@ class LoginForm(forms.Form):
 			print "Not matched..."
 			raise forms.ValidationError("First letter of username should be in capital followed by 2 to 19 small case letters")
 		return username
+
+class PostForm(forms.ModelForm):
+	class Meta:
+		model=Post
+		# form = SignUp
+		fields=["title","description"] #Some fields can be excluded
+
+	def clean_title(self):
+		title=self.cleaned_data["title"]
+		print "Cleaning title, got >> ",title
+		if len(title)==0:
+			return forms.ValidationError("Title should not be blank")
+		return title
+
+	def clean_description(self):
+		description=self.cleaned_data["description"]
+		print "Cleaning description, got >> ",description
+		if len(description)==0:
+			return forms.ValidationError("Descrition should not be blank")
+		return description
+
 
 	# def clean_email(self):
 	# 	signup_dict=self.cleaned_data

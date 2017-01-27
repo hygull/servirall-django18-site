@@ -12,7 +12,7 @@ class SignUp(models.Model):
 
 
 class Post(models.Model):
-	title=models.CharField(max_length=50,null=False,blank=False)
+	title=models.CharField(max_length=150,null=False,blank=False)
 	description=models.TextField()
 	created_at=models.DateTimeField(auto_now_add=True,auto_now=False)
 	updated_at=models.DateTimeField(auto_now_add=False,auto_now=True)
