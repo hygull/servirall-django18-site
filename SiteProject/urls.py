@@ -1,8 +1,13 @@
-from django.conf.urls import include, url
+from django.conf.urls import include, url,handler404
 from django.contrib import admin
 from django.conf import settings #Added
 from django.conf.urls.static import static #Added 
 
+<<<<<<< HEAD
+=======
+handler404='HyGoApp.views.page_not_found'
+
+>>>>>>> 3ae21be2619f02fad0ad709fb3b255d713ea0901
 urlpatterns = [
     # Examples:
     url(r'^$', 'HyGoApp.views.home', name='home'),
