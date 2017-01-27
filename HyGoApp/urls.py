@@ -1,8 +1,8 @@
-from django.conf.urls import include, url,handler404
+# from django.conf.urls import include, url,handler404
 
-handler404='views.page_not_found'
+# handler404='views.page_not_found'
 
-urlpatterns = [
+# urlpatterns = [
         
-]			
+# ]			
 

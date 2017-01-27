@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style type="text/css">
@@ -26,7 +27,7 @@
 <body>
 
 <div class="container">
-  <h3 class="text-center" style="color:lightgreen;">Create a new post</h3>
+  <h3 class="text-center" style="color:lightgreen;"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> &nbspCreate a new post</h3>
   <center><span style="color: lightgreen">Click<span> &raquo; <a href="/" style='color:pink'>Golang</a>&nbsp;
   <a href="/dtl_home/" style='color:pink'>Servirall</a></center>
   <hr>
@@ -47,7 +48,7 @@
       <div class="col-lg-6 col-xs-12">
         <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
             {{ form|crispy }}  <!--{{ form.as_p }}-->
-            <button type="submit" class="btn btn-primary btn-block"><h5> <i class="fa fa-thumbs-up" aria-hidden="true"></i> &nbsp;Post</h5></button>
+            <button type="submit" class="btn btn-primary btn-block"><h5> <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Post</h5></button>
         </form>
 
       </div> 
