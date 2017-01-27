@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
-from .forms import SignUpForm,LoginForm
+from .forms import SignUpForm,LoginForm,PostForm
 from .models import Post
 from django.core.mail import send_mail
 # Create your views here.
@@ -110,6 +110,19 @@ def posts(request):
 	
 	return render(request,"posts.html",context)
 
+def posts_create(request):
+	form=PostForm(request.POST or None)
+	if form.is_valid():
+		instance=form.save(commit=True)
+		print "Title: ",instance.title
+		print "Description: ",instance.description
+		print "post created..."
+		return redirect("/created/")
+	return render(request,"posts_create.html",{"form":form}) 
+
+def posts_created(request):
+	return render(request,"posts_created.html",{}) 
+
 def aboutus(request):
 	title="Blog"
 	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
@@ -130,3 +143,26 @@ def dtl_aboutus(request):
 
 def dtl_contact(request):
 	return render(request,"dtl_contact.html")
+
+# def page_not_found(request):
+# 	return render(request,"404.html")
+
+
+#Error pages
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+
+# def handler404(request):
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    response = render_to_response('500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
