@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # from django.conf.urls import include, url,handler404
 
 # handler404='views.page_not_found'
@@ -6,13 +5,9 @@
 # urlpatterns = [
         
 # ]			
-=======
-from django.conf.urls import include, url,handler404
 
-handler404='views.page_not_found'
+from django.conf.urls import handler404
 
-urlpatterns = [
-        
-]			
->>>>>>> 3ae21be2619f02fad0ad709fb3b255d713ea0901
+handler404='views.page_not_found'		
 
+handler500='views.server_error'	
