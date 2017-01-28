@@ -139,11 +139,14 @@ def dtl_home(request):
 	return render(request,"dtl_home.html",{})
 
 def dtl_aboutus(request):
-	return render(request,"dtl_aboutus.html")
+	return render(request,"dtl_aboutus.html",{})
 
 def dtl_contact(request):
 	return render(request,"dtl_contact.html")
 
+
+def posted_videos(request):
+	return render(request,"posted_videos.html",{})
 # def page_not_found(request):
 # 	return render(request,"404.html")
 

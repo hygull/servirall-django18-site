@@ -19,6 +19,7 @@ urlpatterns = [
     url(r"^posts/$","HyGoApp.views.posts",name="posts"),
     url(r"^posts/create/$","HyGoApp.views.posts_create",name="posts_create"),
     url(r"^created/$","HyGoApp.views.posts_created",name="servirall_aboutus"),
+    url(r"^posts/videos/$","HyGoApp.views.posted_videos",name='posted_videos'),
 
     url(r"^dtl_home/$","HyGoApp.views.dtl_home",name="dtl_home"),
     url(r"^dtl_home/aboutus/$","HyGoApp.views.dtl_aboutus",name="servirall_aboutus"),

@@ -1,0 +1,178 @@
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+  body {
+    background-color: #f6f6f6;
+    width: 1300px;
+    margin: 20px auto;
+    font: normal 13px/100% sans-serif;
+    color: #444;
+}
+div {
+    display:none;
+    padding: 10px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+.totop {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+.totop a {
+    display: none;
+}
+a, a:visited {
+    color: #33739E;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+a:hover {
+    text-decoration: none;
+}
+#loadMore {
+    padding: 10px;
+    text-align: center;
+    background-color: #33739E;
+    color: #fff;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: #fff;
+    color: #33739E;
+}
+#don{
+    text-align: center;
+}
+  </style>
+  <script>
+  /*
+    Load more content with jQuery - May 21, 2013
+    (c) 2013 @ElmahdiMahmoud
+*/   
+
+$(function () {
+    $("div").slice(0, 6).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $("div:hidden").slice(0, 4).slideDown();
+        if ($("div:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+});
+
+$('a[href=#top]').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('.totop a').fadeIn();
+    } else {
+        $('.totop a').fadeOut();
+    }
+});
+  </script>
+</head>
+<body>
+                    <center>
+                        <a class="btn btn-lg btn-info" href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-home fa-1x" aria-hidden="true"></i>&nbsp;Go back to Home</h4></a>
+                        </center><br>
+                    <div class="col-lg-4 col-xs-12" id='don' class='top'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/6DRI9q9Dsmw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/ISWGLeMc2pI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/QmbWAFzOeyg" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/95MXXRi3rfM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/XHEcu97FYZ4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/EvHmSze1ric" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/xjUz95vtlew" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/5ubiEFxt_TQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/AIn2zCSmlh0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/i_kZUVc8nDo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- <div class="col-lg-6 col-xs-12" id='don'>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6DRI9q9Dsmw" frameborder="0" allowfullscreen></iframe>
+                    </div> -->
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/7b-_U5qCPLc" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/NvR9YOpDG4A" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/0dfZ9BXaNyE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/inb8MMZ-QmA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4 col-xs-12" id='don'>
+                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/SV6Sw9CNWek" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    <center><!-- <a href="#" id="loadMore" style="margin: 5px" roll='button' class='btn  btn-sm btn-warning'>Load More Videos</a> --> 
+                    <a class="btn btn-lg btn-info" id='loadMore' href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-spinner fa-1x" aria-hidden="true"></i>&nbsp;Load more videos</h4></a><br>
+                    </center>
+
+                    <p class="totop"> 
+                        <a href=".top">Back to top</a> 
+                    </p>
+</body>
+</html>
