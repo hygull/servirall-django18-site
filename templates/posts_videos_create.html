@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Create a new post </title>
+  <title>Post a new video by just pasting the URL inside area textarea </title>
   <link rel="icon" type="image/gif/png" href="https://cdn2.iconfinder.com/data/icons/goodreads-1/512/goodreads-round-4-256.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +51,7 @@
         <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
             {{ form|crispy }}  <!--{{ form.as_p }}-->
 
-            <button type="submit" class="btn btn-primary btn-block"><h5> <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Post</h5></button>
+            <button type="submit" class="btn btn-primary btn-block"><h5> <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Publish</h5></button>
 
         </form>
 
