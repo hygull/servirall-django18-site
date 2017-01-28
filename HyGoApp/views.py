@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
-from .forms import SignUpForm,LoginForm,PostForm
-from .models import Post
+from .forms import SignUpForm,LoginForm,PostForm,VideoForm
+from .models import Post,Video
 from django.core.mail import send_mail
 # Create your views here.
 def home(request):
@@ -123,6 +123,7 @@ def posts_create(request):
 def posts_created(request):
 	return render(request,"posts_created.html",{}) 
 
+
 def aboutus(request):
 	title="Blog"
 	login_url_link_as_list="<li><a id='login' href='/accounts/login/'>Login</a></li>"
@@ -146,7 +147,27 @@ def dtl_contact(request):
 
 
 def posted_videos(request):
-	return render(request,"posted_videos.html",{})
+	videos=Video.objects.all()[::-1]
+	for video in videos:
+		print "1...",video.url
+		video.url="https://www.youtube.com/embed/"+video.url
+		print "2...",video.url
+	print videos
+	return render(request,"posted_videos.html",{"videos":videos})
+
+def posts_videos_create(request):
+	form=VideoForm(request.POST or None)
+	if form.is_valid():
+		instance=form.save()
+		url=instance.url
+		l=url.split("/")
+		instance.url=l[3]
+		instance=form.save(commit=True)
+		print "Title: ",instance.title
+		print "URL: ",instance.url
+		print "post created..."
+		return redirect("/posts/videos/")
+	return render(request,"posts_videos_create.html",{"form":form}) 
 # def page_not_found(request):
 # 	return render(request,"404.html")
 

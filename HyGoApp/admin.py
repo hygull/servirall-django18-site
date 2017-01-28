@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SignUp, Post
+from .models import SignUp, Post,Video
 from .forms import SignUpForm
 #Register your models here.
 class SignUpAdmin(admin.ModelAdmin):
@@ -14,6 +14,13 @@ class PostAdmin(admin.ModelAdmin):
 	class Meta:
 		model=Post
 
+
+class VideoAdmin(admin.ModelAdmin):
+	list_display=["title","url"]
+	class Meta:
+		model=Video
+
 admin.site.register(SignUp,SignUpAdmin)
 admin.site.register(Post,PostAdmin)
+admin.site.register(Video,VideoAdmin)
 #admin.site.register(SignUp)

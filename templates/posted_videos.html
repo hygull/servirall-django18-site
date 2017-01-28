@@ -111,7 +111,12 @@ $(window).scroll(function () {
                     <div class="col-lg-4 col-xs-12" id='don' class='top'>
                         <iframe width="80%" height="100%" src="https://www.youtube.com/embed/6DRI9q9Dsmw" frameborder="0" allowfullscreen></iframe>
                     </div>
-
+                    {% for video in videos %}
+                    <div class="col-lg-4 col-xs-12" id='don' class='top'>
+                        <!-- <h1>{{ video.title }}</h1> -->
+                       <iframe width="80%" height="100%" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe> 
+                    </div>
+                    {% endfor %}
                     
                     <div class="col-lg-4 col-xs-12" id='don'>
                         <iframe width="80%" height="100%" src="https://www.youtube.com/embed/ISWGLeMc2pI" frameborder="0" allowfullscreen></iframe>
