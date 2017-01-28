@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^login2/$', 'HyGoApp.views.login2', name='login2'),
     url(r'^submit/$', 'HyGoApp.views.success', name='success'),
     url(r'^error/$', 'HyGoApp.views.error', name='error'),
-    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
     url(r"^blogs/$","HyGoApp.views.blogs",name="blogs"),
     url(r"^aboutus/$","HyGoApp.views.aboutus",name="aboutus"),
