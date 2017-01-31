@@ -1,7 +1,4 @@
-
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -12,31 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
-  body {
-    background-color: #f6f6f6;
-    width: 1300px;
-    margin: 20px auto;
-    font: normal 13px/100% sans-serif;
-    color: #444;
-}
-div {
-    display:none;
-    padding: 10px;
-    border-width: 0 1px 1px 0;
-    border-style: solid;
-    border-color: #fff;
-    box-shadow: 0 1px 1px #ccc;
-    margin-bottom: 5px;
-    background-color: #f1f1f1;
-}
-.totop {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-}
-.totop a {
-    display: none;
-}
+
 a, a:visited {
     color: #33739E;
     text-decoration: none;
@@ -73,9 +46,8 @@ a:hover {
     Load more content with jQuery - May 21, 2013
     (c) 2013 @ElmahdiMahmoud
 */   
-
 $(function () {
-    $("div").slice(0, 6).show();
+    $("div").slice(0, 4).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $("div:hidden").slice(0, 4).slideDown();
@@ -102,82 +74,43 @@ $(window).scroll(function () {
         $('.totop a').fadeOut();
     }
 });
-  </script>
+</script>
+  <style type="text/css">
+      iframe{text-align: center;}
+  </style>
 </head>
 <body>
-                    <center>
-                        <a class="btn btn-lg btn-info" href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-home fa-1x" aria-hidden="true"></i>&nbsp;Go back to Home</h4></a>
-                        </center><br>
-                    <div class="col-lg-4 col-xs-12" id='don' class='top'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/6DRI9q9Dsmw" frameborder="0" allowfullscreen></iframe>
+<div class="container" >
+    <div class='row'>
+        <div class='col-lg-12 col-xs-12 text-center'>
+                 <a class="btn btn-xs btn-info" href="/posts/videos/create/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-home fa-1x" aria-hidden="true"></i>&nbsp; &nbsp;Post a new video</h4></a>
+                 <a class="btn btn-xs btn-info" href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-file-video-o fa-1x" aria-hidden="true"></i> &nbsp; Go back to Home</h4></a>
+                 <br>
+                 <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ar7brs0qOG8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
+            <iframe  width="100%px" height="100%" src="https://www.youtube.com/embed/95MXXRi3rfM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
+            <iframe  width="100%" height="100%px" src="https://www.youtube.com/embed/QmbWAFzOeyg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% for video in videos %}
+                    <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
+                        <iframe  width="100%" height="100%" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    {% for video in videos %}
-                    <div class="col-lg-4 col-xs-12" id='don' class='top'>
-                        <!-- <h1>{{ video.title }}</h1> -->
-                       <iframe width="80%" height="100%" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe> 
-                    </div>
-                    {% endfor %}
-                    
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/ISWGLeMc2pI" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/QmbWAFzOeyg" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/95MXXRi3rfM" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/XHEcu97FYZ4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/EvHmSze1ric" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/xjUz95vtlew" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/5ubiEFxt_TQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/AIn2zCSmlh0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/i_kZUVc8nDo" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <!-- <div class="col-lg-6 col-xs-12" id='don'>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6DRI9q9Dsmw" frameborder="0" allowfullscreen></iframe>
-                    </div> -->
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/7b-_U5qCPLc" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/NvR9YOpDG4A" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/0dfZ9BXaNyE" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/inb8MMZ-QmA" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-4 col-xs-12" id='don'>
-                        <iframe width="80%" height="100%" src="https://www.youtube.com/embed/SV6Sw9CNWek" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <br>
-                    <center><!-- <a href="#" id="loadMore" style="margin: 5px" roll='button' class='btn  btn-sm btn-warning'>Load More Videos</a> --> 
-                    <a class="btn btn-lg btn-info" id='loadMore' href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-spinner fa-1x" aria-hidden="true"></i>&nbsp;Load more videos</h4></a><br>
-                    </center>
-
-                    <p class="totop"> 
-                        <a href=".top">Back to top</a> 
-                    </p>
+        {% endfor %}
+        <!-- <a href="#" id="loadMore" style="margin: 5px" roll='button' class='btn  btn-sm btn-warning'>Load More Videos</a> --> 
+        <center>
+            <a class="btn btn-lg btn-info" id='loadMore' href="#" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-spinner fa-1x" aria-hidden="true"></i>&nbsp;Load more videos</h4></a>
+            <br>
+        </center>
+    </div> 
+                   
+</div>
 </body>
 </html>

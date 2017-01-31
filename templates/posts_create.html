@@ -23,6 +23,20 @@
     .form-group-has-error {
       color:white;
     }
+    img:hover{
+      width: 41%;
+      height: 41%
+    }
+    @media only screen and (max-width: 768px){
+      img{
+        width: 60%;
+        height: 60%;
+      }
+      img:hover{
+        width: 61%;
+        height: 61%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -31,23 +45,26 @@
   <h3 class="text-center" style="color:lightgreen;"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> &nbsp; Create a new post</h3>
 
   <center><span style="color: lightgreen">Click<span> &raquo; <a href="/" style='color:pink'><i class="fa fa-motorcycle" aria-hidden="true"></i> &nbsp;Golang</a>&nbsp; | &nbsp;
-  <a href="/dtl_home/" style='color:pink'><i class="fa fa-plane" aria-hidden="true"></i> &nbsp;Servirall</a></center>
+  <a href="/dtl_home/" style='color:pink'><i class="fa fa-plane" aria-hidden="true"></i> &nbsp;Servirall</a>&nbsp;|&nbsp;<a href="/posts/" style='color:pink'><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;All posts</a>&nbsp;|&nbsp;<a href="/posts/" style='color:pink'><i class="fa fa-upload" aria-hidden="true"></i> &nbsp;Post new video</a></center>
   <hr>
       <div class="row">
-      <div class="col-lg-3 col-xs-12">
-          <a href='/'>  
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+
+           <center><img src="http://bestanimations.com/Books/Guestbooks/quill-sign-guestbook-animation-9.gif" class='img-responsive' width="40%" height="40%" alt="innovation" style="text-align: center"></center><br>
+
+          <center><a href='/'>  
               <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Home-512.png" class='img-responsive' width="40%" height="40%"  alt="home">
-          </a><br><br>
+          </a><center><br>
             
-            <a href="/posts/">
-            <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="note"><br><br>
-            </a>
+            <center><a href="/posts/">
+            <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="note"><br>
+            </a></center>
 
-            <img src="https://cdn1.iconfinder.com/data/icons/business-13/6144/13-512.png" class='img-responsive' width="40%" height="40%" alt="clock"><br><br>
+            <center><img src="https://cdn1.iconfinder.com/data/icons/business-13/6144/13-512.png" class='img-responsive' width="40%" height="40%" alt="clock"></center><br>
 
-            <img src="https://cdn1.iconfinder.com/data/icons/babies-color/300/19-512.png" class='img-responsive' width="40%" height="40%"  alt="mother"><br>
+            <center><img src="https://cdn1.iconfinder.com/data/icons/babies-color/300/19-512.png" class='img-responsive' width="40%" height="40%"  alt="mother"></center><br>
       </div>
-      <div class="col-lg-6 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
         <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
             {{ form|crispy }}  <!--{{ form.as_p }}-->
 
@@ -57,16 +74,21 @@
 
       </div> 
 
-            <div class="col-lg-3 col-xs-12 text-center">
-              <img src="https://cdn0.iconfinder.com/data/icons/seo-and-internet-marketing-1-1/512/22-512.png" class='img-responsive' width="50%" height="50%" alt="innovation"><br>
-            
-            <img src="https://cdn0.iconfinder.com/data/icons/purple-set/512/pen_markerpen_writer_ink-512.png" class='img-responsive' width="40%" height="40%"  alt="pen"><br>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+            <center><img src="https://s-media-cache-ak0.pinimg.com/originals/bb/62/46/bb6246c85c65ddd0b35f8e6a817cb256.gif" class='img-responsive' width="40%" height="40%" alt="innovation" style="text-align: center"></center>
 
-            <img src="https://cdn3.iconfinder.com/data/icons/humano2/128x128/apps/openofficeorg-writer.png" class='img-responsive' width="40%" height="40%"  alt="pot"><br>
-            <img src="https://cdn1.iconfinder.com/data/icons/elevator/154/elevator-ventilation-climate-conditioner-air-512.png" class='img-responsive' width="40%" height="40%" alt="ok"><br>
+
+
+              <center><img src="https://cdn0.iconfinder.com/data/icons/seo-and-internet-marketing-1-1/512/22-512.png" class='img-responsive' width="40%" height="40%" alt="innovation" style="text-align: center"></center>
+            
+            <center><img src="https://cdn0.iconfinder.com/data/icons/purple-set/512/pen_markerpen_writer_ink-512.png" class='img-responsive' width="40%" height="40%"  alt="pen"><center>
+
+            <center><img src="https://cdn3.iconfinder.com/data/icons/humano2/128x128/apps/openofficeorg-writer.png" class='img-responsive' width="40%" height="40%"  alt="pot"></center>
+            <center><img src="https://cdn1.iconfinder.com/data/icons/elevator/154/elevator-ventilation-climate-conditioner-air-512.png" class='img-responsive' width="40%" height="40%" alt="ok"></center><br>
         
       </div> 
-      </div>
+      </div><br><hr>
+      <center><span style='color:lightgreen;font-family: sans-serif;'>Copyright©2017, Hygull<br>Bangalore, India +91 7353787704</span><br><center>
     </div>
 </body>
 </html>

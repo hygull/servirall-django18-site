@@ -157,19 +157,26 @@ def posted_videos(request):
 
 def posts_videos_create(request):
 	form=VideoForm(request.POST or None)
-	if form.is_valid():
-		instance=form.save()
-		url=instance.url
-		l=url.split("/")
-		instance.url=l[3]
-		instance=form.save(commit=True)
-		print "Title: ",instance.title
-		print "URL: ",instance.url
-		print "post created..."
-		return redirect("/posts/videos/")
+	try:
+		if form.is_valid():
+			instance=form.save()
+			url=instance.url
+			l=url.split("/")
+			instance.url=l[3]
+			instance=form.save(commit=True)
+			print "Title: ",instance.title
+			print "URL: ",instance.url
+			print "post created..."
+			return redirect("/posts/videos/")
+	except:
+		print "unknown error...<...youtube url or title ...>"
+		return redirect("/url_error_message/")
 	return render(request,"posts_videos_create.html",{"form":form}) 
 # def page_not_found(request):
 # 	return render(request,"404.html")
+def url_error_message(request):
+	print "You didn't enter proper youtube url...https://youtu.be/YB8oOwOra0Q"
+	return render(request,"url_error_message.html",{}) 
 
 
 #Error pages

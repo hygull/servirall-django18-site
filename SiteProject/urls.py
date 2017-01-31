@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^login2/$', 'HyGoApp.views.login2', name='login2'),
     url(r'^submit/$', 'HyGoApp.views.success', name='success'),
     url(r'^error/$', 'HyGoApp.views.error', name='error'),
+    url(r"^url/error_msg/","HyGoApp.views.url_error_message",name='url_error_message'),
     url(r'^admin/', include(admin.site.urls)),
 
     url(r"^blogs/$","HyGoApp.views.blogs",name="blogs"),

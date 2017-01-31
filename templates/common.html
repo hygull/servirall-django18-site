@@ -19,10 +19,15 @@
   <link rel="icon" type="image/gif/png" href="https://cdn2.iconfinder.com/data/icons/goodreads-1/512/goodreads-round-4-256.png">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+  li{
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
 <!--body start-->
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">hygull.com</a>
@@ -41,10 +46,49 @@
 
   </div>
 </nav>
+ -->
+<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="fa fa-ravelry" aria-hidden="true"></i> &nbsp;Servirall</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/dtl_home/aboutus/">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/">Golang</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#" target="_blank">Admission</a></li>
+            <li><a href="https://www.practo.com/" target="_blank">Doctor Booking</a></li>
+            <li><a href="https://ifsc.bankifsccode.com/" target="_blank">Bank details</a></li>
+          </ul> -->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/posts/">Posts</a></li>
+            <li><a href="/aboutus/">About</a></li>
+            {{ login_url_link_as_list|safe }}
+            {{ logout_url_link_as_list|safe }}
+            <li><a href="/dtl_home/">Servirall</a></li>
+            <li><a href="/posts/videos/">Videos</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
 <div class="container">
   <div class="row"><!--row1 start-->
           <!--column1 start-->
-          <div class="col-md-2 text-center"><!--column1 start-->
+          <div class="col-md-2 col-xs-12 col-sm-4 text-center"><!--column1 start-->
               <img src="https://gitlab.com/uploads/user/avatar/655271/avatar.png" class="img-circle" alt="Rishikesh" width="60%" height="60%"><br><br>
 
 
@@ -91,7 +135,7 @@
               <a href='http://iris-go.com/' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp; Iris</a><hr>
               <a href='https://echo.labstack.com/' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-shield" aria-hidden="true"></i> &nbsp; Echo</a><hr>
              <a href='https://beego.me/' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-microchip" aria-hidden="true"></i> &nbsp; Beego</a><hr>
-            <a href='https://github.com/go-martini/martini' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-sitemap" aria-hidden="true"></i> &nbsp; Martini</a>
+            <a href='https://github.com/go-martini/martini' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-sitemap" aria-hidden="true"></i> &nbsp; Martini</a><br>
 
           </div><!--column1 end-->
 
@@ -102,7 +146,7 @@
           <!--column2 end-->
 
         <!--column3 start-->
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 col-xs-12 co-sm-4 text-center">
                     <a class="btn btn-block btn-info" href="/posts/create/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-pencil fa-1x" aria-hidden="true"></i>&nbsp;Write a new post</h4></a>
                     <br>
                     <a class="btn btn-block btn-info" href="/posts/videos/create/" role="button"><h4><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;Post a video</h4></a><br>
@@ -131,20 +175,43 @@
                      <span style="color:gray;font-size: 20px">Nice Links for Go</span><br>
                      <a href='https://golang.org/doc/code.html' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; How to write Go code</a><hr>
                       <a href='https://github.com/golang/go/wiki/Learn' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-book" aria-hidden="true"></i> &nbsp; Github notes</a>
+                      <br>
+                      <hr>
+                      <span style="color:gray;font-size: 20px">Python Resources</span><br>
+                     <a href='http://www.codeconquest.com/blog/the-50-best-websites-to-learn-python/' class='btn btn-success btn-block' target="_blank" role='button'> <i class="fa fa-lightbulb-o" aria-hidden="true"></i> &nbsp; 50 best websites to learn Python</a><hr>
 
+                     
+                    
+                     
+
+                      <div class="list-group" id='python_resources_list'>
+                        <a href=" https://www.tutorialspoint.com/python/" target="_blank" class="list-group-item list-group-item-info"> &nbsp;<img src="https://cdn2.iconfinder.com/data/icons/formats-4/140/_P-23-512.png" width='10%'>Python 2</a>
+
+                        <a href="https://www.tutorialspoint.com/python3/" target="_blank" class="list-group-item list-group-item-success"><img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/12.File-512.png" width='10%'> Pytohn 3</a>
+
+                        <a href="https://www.codecademy.com/learn/python" target="_blank" class="list-group-item list-group-item-warning"><img src="https://cdn3.iconfinder.com/data/icons/cosmo-color-education-2/40/mark_c-2-512.png" width='10%'>Codecademy (learn &amp; practice)</a>
+                      </div>
+                      
                 </div>
         <!--column3 end-->
-          {% block next_link %}
+          <!-- {% block next_link %}
 
-          {% endblock %}
+          {% endblock %} -->
   </div><!--row1 end-->
-   {% block next %}
+  <!--  {% block next %}
 
-   {% endblock %}
+   {% endblock %} -->
 </div><!--container1 end-->
-<!--body end-->
+<hr>
+<footer style="background-color: black;padding:4px;">
+      <p class="text-center" style="color: lightgreen;">
+        Copyright© 2017, Servirall<br/>
+        Bangalore,India
+      </p>
+</footer>
 {% block share_btn %}
 
 {% endblock %}
+<!--body end-->
 </body>
 </html>
