@@ -11,7 +11,7 @@ Django | 1.8
 ### Servirall (Serve+Viral+All)
 Servirall name is selected because this project has a site named Servirall which is the comibed 
 
-![Best motivational video - Real life video from youtube](<iframe width="640" height="360" src="https://www.youtube.com/embed/6FkG-Bh9J9c" frameborder="0" allowfullscreen></iframe>) 
+![Best motivational video - Real life video from youtube](https://www.youtube.com/embed/6FkG-Bh9J9c) 
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/6FkG-Bh9J9c" frameborder="0" allowfullscreen></iframe>
 
