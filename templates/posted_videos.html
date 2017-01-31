@@ -91,14 +91,15 @@ $(window).scroll(function () {
     </div>
     <div class="row">
         <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
+            <iframe  width="100%" height="100%px" src="https://www.youtube.com/embed/U5EKNURq4a0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ar7brs0qOG8" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
             <iframe  width="100%px" height="100%" src="https://www.youtube.com/embed/95MXXRi3rfM" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
-            <iframe  width="100%" height="100%px" src="https://www.youtube.com/embed/QmbWAFzOeyg" frameborder="0" allowfullscreen></iframe>
-        </div>
+        
         {% for video in videos %}
                     <div class='col-ld-4 col-md-4 col-sm-4 col-xs-6'>
                         <iframe  width="100%" height="100%" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
