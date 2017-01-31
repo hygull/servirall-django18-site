@@ -75,7 +75,7 @@ class VideoForm(forms.ModelForm):
 		#For placeholders
 		widgets={
 			"title":forms.TextInput(attrs={"placeholder":"Enter the title of video from youtube..."}),
-			"url":forms.TextInput(attrs={"placeholder":"Paste the video URL from youtube..."})
+			"url":forms.Textarea(attrs={"placeholder":"Paste the video URL from youtube..."})
 		}
 
 	def clean_title(self):

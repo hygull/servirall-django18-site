@@ -99,7 +99,7 @@ def posts(request):
 		posts=Post.objects.all()
 		print "The posts available are as follows:\n",posts
 	else:
-		posts_message="<h2 style='color:orange;text-align:center;'> No posts found<hr>Please <span style='color:navy;'>login</span> to the see protected posts</h2><hr><h3 style='color:blue;text-align:center;'>Username:  <span style='color:orange;'>Rishikesh67</span><hr><br>Password: <span style='color:orange;'>admin@321</span></h3>"
+		posts_message="<h2 style='color:red;text-align:center;'> No posts found<h2 style='text-align:center;'><hr>Please <span style='color:navy;'><a href='/accounts/login/'>login</a></span> to the see protected posts</h2><hr><h3 style='color:blue;text-align:center;'>Username:  <span style='color:orange;'>Rishikesh67</span><hr><br>Password: <span style='color:orange;'>admin@321</span></h3>"
 	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts,"posts_message":posts_message}
 
 	if request.user.is_authenticated():
