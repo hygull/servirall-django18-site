@@ -23,6 +23,20 @@
     .form-group-has-error {
       color:white;
     }
+    .hidden_img{
+      display: none;
+      visibility:hidden;
+    }
+    @media only screen and (max-width: 540px){
+      .hidden_img{
+        display: block;
+        visibility: visible;
+      }
+    }
+
+    img:hover{
+      width: 41%;
+    }
   </style>
 </head>
 <body>
@@ -34,20 +48,31 @@
   <a href="/dtl_home/" style='color:pink'><i class="fa fa-plane" aria-hidden="true"></i> &nbsp;Servirall</a></center>
   <hr>
       <div class="row">
-      <div class="col-lg-3 col-xs-12">
+      <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 text-center">
+         <center> 
           <a href='/'>  
-              <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Home-512.png" class='img-responsive' width="40%" height="40%"  alt="home">
+              <img title='Home page' src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Home-512.png" class='img-responsive' width="40%" height="40%"  alt="home">
           </a><br><br>
             
             <a href="/posts/">
-            <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="note"><br><br>
+            <img title='All posts' src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-19-512.png" class='img-responsive' width="40%" height="40%" role="button" alt="note"><br>
             </a>
 
-            <img src="https://cdn1.iconfinder.com/data/icons/business-13/6144/13-512.png" class='img-responsive' width="40%" height="40%" alt="clock"><br><br>
+            <img src="https://cdn1.iconfinder.com/data/icons/business-13/6144/13-512.png" class='img-responsive' width="40%" height="40%" alt="clock"><br>
 
             <img src="https://cdn1.iconfinder.com/data/icons/babies-color/300/19-512.png" class='img-responsive' width="40%" height="40%"  alt="mother"><br>
+
+            <img class='hidden_img' src="https://cdn4.iconfinder.com/data/icons/democracy/500/Political_14-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/people-faces/76/avatar_person_human_user_man_woman-12-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn0.iconfinder.com/data/icons/business-6-2/48/269-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/people-faces/76/avatar_person_human_user_man_woman-12-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+            </center>
       </div>
-      <div class="col-lg-6 col-xs-12">
+      <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 text-center">
         <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
             {{ form|crispy }}  <!--{{ form.as_p }}-->
 
@@ -57,14 +82,20 @@
 
       </div> 
 
-            <div class="col-lg-3 col-xs-12 text-center">
-              <img src="https://cdn0.iconfinder.com/data/icons/seo-and-internet-marketing-1-1/512/22-512.png" class='img-responsive' width="50%" height="50%" alt="innovation"><br>
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 text-center">
+              <center><img src="https://cdn0.iconfinder.com/data/icons/seo-and-internet-marketing-1-1/512/22-512.png" class='img-responsive' width="40%" height="40%" alt="innovation"><br>
             
             <img src="https://cdn0.iconfinder.com/data/icons/purple-set/512/pen_markerpen_writer_ink-512.png" class='img-responsive' width="40%" height="40%"  alt="pen"><br>
 
             <img src="https://cdn3.iconfinder.com/data/icons/humano2/128x128/apps/openofficeorg-writer.png" class='img-responsive' width="40%" height="40%"  alt="pot"><br>
-            <img src="https://cdn1.iconfinder.com/data/icons/elevator/154/elevator-ventilation-climate-conditioner-air-512.png" class='img-responsive' width="40%" height="40%" alt="ok"><br>
-        
+            <img src="https://cdn1.iconfinder.com/data/icons/elevator/154/elevator-ventilation-climate-conditioner-air-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/creative-process-14/512/Video_Editing-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/creative-process-14/512/Idea-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/creative-process-14/512/Apps_Builder-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"><br>
+          <img class='hidden_img' src="https://cdn1.iconfinder.com/data/icons/creative-process-14/512/3D_Modeling-512.png" class='img-responsive' width="40%" height="40%" alt="desktop"></center><br>
       </div> 
       </div>
     </div>
