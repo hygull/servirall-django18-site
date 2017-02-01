@@ -40,12 +40,19 @@
   </style>
 </head>
 <body>
-
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=183960815416449";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="container">
   <h3 class="text-center" style="color:lightgreen;"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i> &nbsp; Post a video by pasting its URL</h3>
 
   <center><span style="color: lightgreen">Click<span> &raquo; <a href="/" style='color:pink'><i class="fa fa-motorcycle" aria-hidden="true"></i> &nbsp;Golang</a>&nbsp; | &nbsp;
-  <a href="/dtl_home/" style='color:pink'><i class="fa fa-plane" aria-hidden="true"></i> &nbsp;Servirall</a></center>
+  <a href="/dtl_home/" style='color:pink'><i class="fa fa-plane" aria-hidden="true"></i> &nbsp;Servirall</a>&nbsp; | &nbsp;   <a href="/posts/videos/" style='color:pink'><i class="fa fa-certificate" aria-hidden="true"></i> &nbsp;All videos</a><br>
+  <div class="fb-like" data-href="http://rishikesh67.pythonanywhere.com/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></center>
   <hr>
       <div class="row">
       <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 text-center">

@@ -40,6 +40,9 @@ a:hover {
 #don{
     text-align: center;
 }
+body{
+  background-color: #2CA36F;
+}
   </style>
   <script>
   /*
@@ -80,12 +83,24 @@ $(window).scroll(function () {
   </style>
 </head>
 <body>
+<script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=183960815416449";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 <div class="container" >
     <div class='row'>
         <div class='col-lg-12 col-xs-12 text-center'>
                  <a class="btn btn-xs btn-info" href="/posts/videos/create/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-home fa-1x" aria-hidden="true"></i>&nbsp; &nbsp;Post a new video</h4></a>
                  <a class="btn btn-xs btn-info" href="/" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-file-video-o fa-1x" aria-hidden="true"></i> &nbsp; Go back to Home</h4></a>
                  <br>
+                 <br>
+                 <center>
+                  <i style='color:pink;' class="fa fa-compass fa-2x" aria-hidden="true"></i> &nbsp;<i style='color:pink;' class="fa fa-television fa-2x" aria-hidden="true"></i>
+              <div class="fb-like" data-href="http://rishikesh67.pythonanywhere.com/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div> <i style='color:pink;' class="fa fa-wheelchair-alt fa-2x" aria-hidden="true"></i> &nbsp;<i style='color:pink;' class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+                  </center>
                  <br>
         </div>
     </div>
@@ -106,10 +121,13 @@ $(window).scroll(function () {
                     </div>
         {% endfor %}
         <!-- <a href="#" id="loadMore" style="margin: 5px" roll='button' class='btn  btn-sm btn-warning'>Load More Videos</a> --> 
-        <center>
-            <a class="btn btn-lg btn-info" id='loadMore' href="#" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-spinner fa-1x" aria-hidden="true"></i>&nbsp;Load more videos</h4></a>
+
+       <center>
+            <!-- <a class="btn btn-lg btn-info" id='loadMore' href="#" role="button"><h4><i class="fa fa-book" aria-hidden="true"></i> &nbsp;<i class="fa fa-spinner fa-1x" aria-hidden="true"></i>&nbsp;Load more videos</h4></a> -->
+
+           <!--  <h5 style='color: white;margin-top: 50px;'>You can post videos by pasting their URLs...</h5> -->
             <br>
-        </center>
+        </center> 
     </div> 
                    
 </div>
