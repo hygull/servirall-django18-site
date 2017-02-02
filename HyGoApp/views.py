@@ -15,7 +15,7 @@ def home(request):
 	logout_url_link_as_list=""
 	# username="Dear visitor"    """............Won't affect"""
 	username="Dear!!!"
-
+	print "HOME PATH: ",request.get_full_path();
 	if request.method=="POST":
 		print request.POST
 
@@ -197,3 +197,11 @@ def handler500(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
+
+def profile_info(request,extra):
+	profile=request.get_full_path()
+	l=profile.split("+")
+	print l,"\n\n"
+	print "Path : ",request.get_full_path(),"\n";
+	print "Extra : ",extra
+	return render(request,"profile_info.html",{"profile_email":request.get_full_path(),"extra":extra,"id":l[1],"name":l[2],"image":l[3],"email":l[4]})

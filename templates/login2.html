@@ -9,21 +9,37 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!--Google login-->
+<!--Google login/logout-->
 <!--26964245872-jn6kd2bdk6j1d3h29qqqf2oqjvbuqgqq.apps.googleusercontent.com-->
   <meta name="google-signin-scope" content="profile email">
    <meta name="google-signin-client_id" content="26964245872-65cm5s4nh17tkftjo286cnfgj8uean79.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>   
   <script type="text/javascript">
-      function onSignIn(googleUser) {
+  function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    console.log("Going to...")
+    window.location="http://rishikesh67.pythonanywhere.com/profile_info/+"+profile.getId()+"+"+profile.getName()+"+"+profile.getImageUrl()+"+"+profile.getEmail();
   }
   </script>
-<!--Google login ends-->
+
+  <script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+  function info(){
+
+   window.location="http://localhost:8000/profile_info/+10000+Rishikesh+https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQimF5gsnL4G5ryB61f1yklONy9TZznLzB4WiNUlCQJErin0xEj+rishikesh0014051992@gmail.com"
+  }
+</script>
+<!--Google login/logout ends-->
 </head>
 <body>
 
@@ -38,9 +54,13 @@
         </form>
         <br>
         <center><!--Google login-->
-                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                  <div class="g-signin2" data-onsuccess="onSignIn"></div><br>
+                  <a href="#" onclick="signOut();">Sign out</a>
+
+                  
                   <!--Google login ends-->
         </center>
+        <button onclick='info()'>Press</button>
 
       </div>  
       </div>

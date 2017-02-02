@@ -27,6 +27,7 @@ urlpatterns = [
     url(r"^dtl_home/aboutus/$","HyGoApp.views.dtl_aboutus",name="servirall_aboutus"),
     #url(r"^dtl_base/contact/$","HyGoApp.views.dtl_contact",name="servirall_contact"),
 
+    url(r'^profile_info/(.*)$', "HyGoApp.views.profile_info",name='profile_info'),
     url(r'^accounts/', include('registration.backends.default.urls')), #dajngo-registration-redux
 ]	#+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)		
 
