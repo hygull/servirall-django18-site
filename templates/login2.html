@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--Google login-->
+<!--26964245872-fh4s4sf8hu1ag5u7p2kpm4b545ihu491.apps.googleusercontent.com-->
+  <meta name="google-signin-scope" content="profile email">
+   <meta name="google-signin-client_id" content="26964245872-jn6kd2bdk6j1d3h29qqqf2oqjvbuqgqq.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>   
+  <script type="text/javascript">
+      function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+  </script>
+<!--Google login ends-->
 </head>
 <body>
 
@@ -20,6 +36,11 @@
             <button type="submit" class="btn btn-default">Login</button>
             <button type="reset" class="btn btn-default">Reset</button>
         </form>
+        <br>
+        <center><!--Google login-->
+                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                  <!--Google login ends-->
+        </center>
 
       </div>  
       </div>
