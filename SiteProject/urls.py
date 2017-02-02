@@ -6,6 +6,7 @@ from django.conf.urls.static import static #Added
 
 urlpatterns = [
     # Examples:
+    # url(r'^$', 'HyGoApp.views.login_with_google', name='home'),
     url(r'^$', 'HyGoApp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^login/$', 'HyGoApp.views.login', name='login'),

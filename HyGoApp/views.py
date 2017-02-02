@@ -204,4 +204,11 @@ def profile_info(request,extra):
 	print l,"\n\n"
 	print "Path : ",request.get_full_path(),"\n";
 	print "Extra : ",extra
-	return render(request,"profile_info.html",{"profile_email":request.get_full_path(),"extra":extra,"id":l[1],"name":l[2],"image":l[3],"email":l[4]})
+	return render(request,"profile_info.html",{"profile_email":request.get_full_path(),"extra":extra,"id":l[1],"name":l[2].replace("%20"," "),"image":l[3],"email":l[4]})
+
+
+def login_with_google(request):
+	if "servirall_username" in request.COOKIES :
+		return redirect("/home/") 
+	else:
+		return redirect("/login2/")
