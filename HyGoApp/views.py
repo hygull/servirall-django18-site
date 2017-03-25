@@ -99,7 +99,13 @@ def posts(request):
 		posts=Post.objects.all()
 		print "The posts available are as follows:\n",posts
 	else:
-		posts_message="<h2 style='color:red;text-align:center;'> No posts found<h2 style='text-align:center;'><hr>Please <span style='color:navy;'><a href='/accounts/login/'>login</a></span> to the see protected posts</h2><hr><h3 style='color:blue;text-align:center;'>Username:  <span style='color:orange;'>Rishikesh67</span><hr><br>Password: <span style='color:orange;'>admin@321</span></h3>"
+		posts_message="""<h3 style='color:gray;text-align:center;'> No posts found</h3><h4 style='text-align:center;'><hr>Please <span style='color:navy;'><a href='/accounts/login/'>login</a></span> to the see protected posts</h4><hr><h5 style='color:blue;text-align:center;'>Username:  <span style='color:orange;'>root</span><br>Password: <span style='color:orange;'>admin@321</span></h5><hr>
+		<center><img src='http://theworldly.co.uk/wp-content/uploads/2017/01/tech-wowcity.jpg' width='90%'><hr>
+		<img src='http://www.robertwmills.com/wp-content/uploads/2016/03/healthcare-technology-8-04-2015.jpg' width='90%'> <hr>
+		<img src='http://i.huffpost.com/gen/1980282/images/o-BUSINESS-TECHNOLOGY-facebook.jpg' width='90%'><hr>
+
+		</center>
+		"""
 	context={"title":title,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list,"posts":posts,"posts_message":posts_message}
 
 	if request.user.is_authenticated():

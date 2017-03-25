@@ -9,6 +9,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+       {% block js_angular_link %}
+       {% endblock %}
     <link rel="icon" href="../../favicon.ico">
 
     <title>{% block head_title %}MVP Landing{% endblock %}</title>
@@ -33,15 +35,17 @@
             
 
           
-            {% block content %}
+    {% block content %}
 
-            {% endblock %}
+    {% endblock %}
               
 
     </div> <!-- /container -->
 
     {% include "javascript.html" %}
-    
+
+    {% block js_github_block %}
+    {% endblock %}
     
   </body>
 </html>
