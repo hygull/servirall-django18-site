@@ -26,3 +26,10 @@ class Video(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+class Markdown(models.Model):
+	name = models.CharField(max_length=100, blank=False)
+	markdown_text = models.TextField()
+
+	def __unicode__(self):
+		return self.name

@@ -50,7 +50,7 @@ INSTALLED_APPS = (
     #3rd party app(s)
     "crispy_forms",
     "registration", #pip install django-registration-redux
-
+    "markdown_deux",
     #My app(s)
     "HyGoApp",
 )

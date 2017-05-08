@@ -1,9 +1,17 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
 from .forms import SignUpForm,LoginForm,PostForm,VideoForm
-from .models import Post,Video
+from .models import Post,Video,Markdown
 from django.core.mail import send_mail
 # Create your views here.
+
+def rscript(request):
+	markdown_obj = Markdown.objects.get(name="rscript")
+	return render(request , "rscript.html", {"markdown_text":markdown_obj.markdown_text}) 
+
+def supermarket(request):
+	return render(request , "supermarket.html", {}) 
+
 def home(request):
 	title="HyGo"
 	# logout=""
