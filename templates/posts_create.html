@@ -37,6 +37,16 @@
         height: 61%;
       }
     }
+
+     @media only screen and (max-width: 450px){
+        #column1, #column2{
+            display: none;
+            visibility: hidden;
+        } 
+     }
+ input#id_title.textinput.textInput.form-control  {
+    background-color: red;
+  }
   </style>
 </head>
 <body>
@@ -78,7 +88,7 @@
   </center>
   <hr>
       <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center" id="column1">
 
            <center><img src="http://bestanimations.com/Books/Guestbooks/quill-sign-guestbook-animation-9.gif" class='img-responsive' width="40%" height="40%" alt="innovation" style="text-align: center"></center><br>
 
@@ -94,7 +104,7 @@
 
             <center><img src="https://cdn1.iconfinder.com/data/icons/babies-color/300/19-512.png" class='img-responsive' width="40%" height="40%"  alt="mother"></center><br>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
         <form class="form" method="POST" action="">{% csrf_token %}<!--In case of action included-->
             {{ form|crispy }}  <!--{{ form.as_p }}-->
 
@@ -104,7 +114,7 @@
 
       </div> 
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center" id="column3">
             <center><img src="https://s-media-cache-ak0.pinimg.com/originals/bb/62/46/bb6246c85c65ddd0b35f8e6a817cb256.gif" class='img-responsive' width="40%" height="40%" alt="innovation" style="text-align: center"></center>
 
 

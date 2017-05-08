@@ -20,6 +20,9 @@ class Post(models.Model):
 	def __unicode__(self):
 		return self.title
 
+	def get_absolute_path(self):
+		return "http://rishikesh67.pythonaywhere.com/posts/%d"%(self.id)
+
 class Video(models.Model):
 	title=models.CharField(max_length=150,null=False,blank=False)
 	url=models.TextField()
