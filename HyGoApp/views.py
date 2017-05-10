@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
-from .forms import SignUpForm,LoginForm,PostForm,VideoForm
-from .models import Post,Video,Markdown
+from .forms import SignUpForm,LoginForm,PostForm,VideoForm, VideoVirtualRealityForm
+from .models import Post,Video,Markdown,VideoVirtualReality
 from django.core.mail import send_mail
 # Create your views here.
 
@@ -10,7 +10,29 @@ def rscript(request):
 	return render(request , "rscript.html", {"markdown_text":markdown_obj.markdown_text}) 
 
 def supermarket(request):
-	return render(request , "supermarket.html", {}) 
+	# form.url = 
+	form = VideoVirtualRealityForm()
+	virtual_videos = VideoVirtualReality.objects.all()
+	virtual_reality_videos = ["https://www.youtube.com/embed/"+video.url for video in virtual_videos]
+	print virtual_reality_videos
+	if request.method == "POST":
+		try:
+			form=VideoVirtualRealityForm(request.POST or None)
+			if form.is_valid():
+				instance=form.save()
+				url=instance.url
+				l=url.split("/")
+				instance.url=l[3]
+				instance=form.save(commit=True)
+				print "Title: ",instance.title
+				print "URL: ",instance.url
+				print "post created..."
+				return redirect("/blogs/supermarket/")
+		except:
+			print "unknown error...<...youtube url or title ...>"
+			form = VideoVirtualRealityForm()
+			return render(request , "supermarket.html", {"form":form, "virtual_reality_videos":virtual_reality_videos}) 
+	return render(request , "supermarket.html", {"form":form,"virtual_reality_videos":virtual_reality_videos}) 
 
 def home(request):
 	title="HyGo"

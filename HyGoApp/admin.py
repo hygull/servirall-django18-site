@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SignUp, Post,Video, Markdown
+from .models import SignUp, Post,Video, Markdown, VideoVirtualReality
 from .forms import SignUpForm
 #Register your models here.
 class SignUpAdmin(admin.ModelAdmin):
@@ -24,4 +24,5 @@ admin.site.register(SignUp,SignUpAdmin)
 admin.site.register(Post,PostAdmin)
 admin.site.register(Video,VideoAdmin)
 admin.site.register(Markdown)
+admin.site.register(VideoVirtualReality)
 #admin.site.register(SignUp)

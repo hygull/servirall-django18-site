@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import SignUp,Post,Video
+from .models import SignUp,Post,Video,VideoVirtualReality
 
 import re
 
@@ -107,3 +107,36 @@ class VideoForm(forms.ModelForm):
 	# 	if not len(lst)==1:
 	# 		raise forms.ValidationError("Only gmail is allowed. Email should be in the form eg. hem@gmail.com & golang@gmail.com etc.Maximum length should be 30")
 	# 	return email #In absence of this line => This field can't be null
+
+class VideoVirtualRealityForm(forms.ModelForm):
+	class Meta:
+		model=VideoVirtualReality
+		# form = SignUp
+		fields=["title","url"] #Some fields can be excluded
+
+		#For placeholders
+		widgets={
+			"title":forms.TextInput(attrs={"placeholder":"Enter the title of video from youtube..."}),
+			"url":forms.TextInput(attrs={"placeholder":"Paste the video URL from youtube..."})
+		}
+
+	def clean_title(self):
+		title=self.cleaned_data["title"]
+		print "Cleaning title, got >> ",title
+		if len(title)==0:
+			raise forms.ValidationError("Title should not be blank")
+		return title
+
+	def clean_url(self):
+		url=self.cleaned_data["url"]
+		print "Cleaning url, got >> ",url
+		l=url.split('/')
+		if not len(l)==4:
+			raise forms.ValidationError("Wrong URL. The url should be like this =>  https://youtu.be/Kg9DGBLHUfw")
+		else:
+			if not l[0]=="https:" or not  l[1]=="":
+				raise forms.ValidationError("Wrong URL. The url should start with => https://. eg https://youtu.be/Kg9DGBLHUfw")
+			else:
+				if not l[2]=='youtu.be':
+					raise forms.ValidationError("Wrong URL, The url should contain => youtu.be. It should be like => https://youtu.be/Kg9DGBLHUfw")
+		return url
