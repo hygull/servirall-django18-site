@@ -44,10 +44,16 @@
   <div class="row">
       <div  class="col-sm-1 col-lg-1 text-center">
       </div>
-  		<div class="col-sm-10 col-lg-10">
-  		      <h1 id="head" class="text-center"><span class="glyphicon glyphicon-star"></span> Supermarket</h1>
+      <div class="col-sm-10 col-lg-10">
+            <h1 id="head" class="text-center"><span class="glyphicon glyphicon-star"></span> Supermarket</h1>
+            <span ><a href="/">Home</a> </span> |&nbsp;&nbsp;&nbsp;
+            <span ><a href="#img-processing">Image processing</a> </span> |&nbsp;&nbsp;&nbsp;
+             <span ><a href="#videos">This Videos</a> </span> |&nbsp;&nbsp;&nbsp;
+             <span><a href="/dtl_home/">Servirall</a></span> |&nbsp;&nbsp;&nbsp;
+             <span><a href="/posts/videos/">All Videos</a></span>
+            <hr>
             <br>
-  				  <h4><span class="glyphicon glyphicon-pencil"></span> 
+            <h4><span class="glyphicon glyphicon-pencil"></span> 
             A supermarket is a self-service shop offering a wide variety of food and household products, organized into aisles.    
             <br>
             <br>
@@ -59,7 +65,7 @@
             </h4>
             <br>
            <center> 
-  	       <!-- <img src="http://www.foodmanufacture.co.uk/var/plain_site/storage/images/publications/food-beverage-nutrition/foodmanufacture.co.uk/manufacturing/morrisons-slashes-prices-as-supermarket-price-war-looms/8996146-1-eng-GB/Morrisons-slashes-prices-as-supermarket-price-war-looms.jpg" class="img-responsive" width="100%"></center> -->  
+           <!-- <img src="http://www.foodmanufacture.co.uk/var/plain_site/storage/images/publications/food-beverage-nutrition/foodmanufacture.co.uk/manufacturing/morrisons-slashes-prices-as-supermarket-price-war-looms/8996146-1-eng-GB/Morrisons-slashes-prices-as-supermarket-price-war-looms.jpg" class="img-responsive" width="100%"></center> -->  
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -132,7 +138,7 @@
           <hr>
           <br>
            <!--Videos-->
-           <div class="row">
+           <div class="row" id="videos">
                 {% for link in virtual_reality_videos %}
                  <div class="col-sm-4">
                   <iframe width="100%" height="100%" src="{{ link }}" frameborder="0" allowfullscreen></iframe>
@@ -179,7 +185,7 @@
 
           
             <hr>
-           <h1 class="text-center"><span class="glyphicon glyphicon-star"></span> Python - Image processing</h1>
+           <h1 class="text-center" id="img-processing"><span class="glyphicon glyphicon-star"></span> Python - Image processing</h1>
            <center>
            
           
@@ -228,7 +234,7 @@
            </center>
 
            
-  		</div><!--column2 ends-->
+      </div><!--column2 ends-->
       <div  class="col-sm-1 col-lg-1 text-center">
       </div>
   </div>   
