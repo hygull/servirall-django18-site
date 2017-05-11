@@ -248,3 +248,36 @@ def login_with_google(request):
 		return redirect("/home/") 
 	else:
 		return redirect("/login2/")
+
+
+def scrapped_image_links(request):
+	error = ""
+	links = []
+	without_http = []
+	display = ""
+	url = request.POST.get("url")
+	print "Fetching data from : ",url
+	if url:
+		try:
+			import requests
+			from bs4 import BeautifulSoup
+			page = requests.get(url.strip())
+			print "Server Response : ",page.status_code
+			soup = BeautifulSoup(page.content, "html.parser")
+			images = soup.find_all("img")
+
+			for image in images:
+				link = image["src"]
+				if "http" in link:
+					links.append(link)
+				else:
+					without_http.append(link)
+			print links
+		except Exception as e:
+			print e
+			error = "You entered invalid url."
+	else:
+		if request.method == "GET":
+			display = "no"
+		error = "You didn't enter proper url."
+	return render(request, "scrapped_image_links.html",{"error":error, "links":links, "without_http":without_http, "display":display})

@@ -7,6 +7,7 @@ from django.conf.urls.static import static #Added
 urlpatterns = [
     url(r"^blogs/r-programming/$","HyGoApp.views.rscript",name="rscript"),
     url(r"^blogs/supermarket/$","HyGoApp.views.supermarket",name="supermarket"),
+    url(r"^image-scrapper/$", "HyGoApp.views.scrapped_image_links",name="scrapped_image_links"),
     # Examples:
     # url(r'^$', 'HyGoApp.views.login_with_google', name='home'),
     url(r'^$', 'HyGoApp.views.home', name='home'),
