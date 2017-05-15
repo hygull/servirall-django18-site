@@ -51,6 +51,8 @@ INSTALLED_APPS = (
     "crispy_forms",
     "registration", #pip install django-registration-redux
     "markdown_deux",
+    "rest_framework",
+
     #My app(s)
     "HyGoApp",
 )

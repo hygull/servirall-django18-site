@@ -2,9 +2,18 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings #Added
 from django.conf.urls.static import static #Added 
+from rest_framework import routers
+from HyGoApp.api.viewsets import VideoViewSet
 
-
+# Rest API related url conf (START)
+router = routers.DefaultRouter()
+router.register("videos", VideoViewSet)
+    
+# END 
 urlpatterns = [
+    # Rest API
+    url(r"^hygull/api/", include(router.urls) ),
+
     url(r"^blogs/r-programming/$","HyGoApp.views.rscript",name="rscript"),
     url(r"^blogs/supermarket/$","HyGoApp.views.supermarket",name="supermarket"),
     url(r"^image-scrapper/$", "HyGoApp.views.scrapped_image_links",name="scrapped_image_links"),
