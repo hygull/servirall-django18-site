@@ -1,5 +1,6 @@
 {% load markdown_deux_tags %}
 {% load crispy_forms_tags %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +45,11 @@
       label[for="id_title"],label[for="id_url"]{
         width:800px;
       }
+    }
+
+    .carousel-inner .item, .carousel-inner .item-active{
+      position: absoute;
+      height: 500 px;
     }
   </style>
 </head>
@@ -97,32 +103,35 @@
       <li data-target="#myCarousel" data-slide-to="3"></li>
       <li data-target="#myCarousel" data-slide-to="4"></li>
       <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
+
       <div class="item active">
-        <img src="https://lh3.googleusercontent.com/gtdNi9YZSRzTQ-OXjB5-k0D-_6yLu4wAGwnDsCIU2Vnd9WacAFVYh9-m0dX1CyyJ4Q=h900" alt="Los Angeles" height="500px" width="600px" class="img-responsive">
+        <img src="{% static 'img/mother_baby.jpg' %}" alt="Mother baby" min-height="500px" width="600px" class="img-responsive">
+      </div>
+      <div class="item">
+        <img src="{% static 'img/home_pic.jpg' %}" alt="Home pic" min-height="500px" width="600px" class="img-responsive">
       </div>
 
       <div class="item">
-        <img src="http://elevate.com.au/wp-content/uploads/2016/05/Supermarket.jpg" alt="Chicago" height="500px" width="600px" class="img-responsive">
-      </div>
-    
-      <div class="item">
-        <img src="http://www.galleriasm.com/images/upload/BranchBg/img_galleria_branch_ym_bg1.jpg" alt="New york" width="600px" height="500px"  class="img-responsive">
-      </div>
-      
-      <div class="item">
-        <img src="https://c1.staticflickr.com/9/8603/15863921043_6983e912a2_b.jpg" alt="Los Angeles" height="500px" width="600px" class="img-responsive">
+        <img src="http://elevate.com.au/wp-content/uploads/2016/05/Supermarket.jpg" alt="Supermarket" min-height="500px" width="600px" class="img-responsive">
       </div>
 
        <div class="item">
-        <img src="http://anmblog.typepad.com/.a/6a00d8341c565553ef019affd9bd23970b-pi" alt="Chicago" height="500px" width="600px" class="img-responsive">
+        <img src="http://fizcity.com/blog/wp-content/uploads/2016/12/marketing-2.png" alt="Chicago" min-height="500px" width="600px" class="img-responsive">
       </div>
-    
+
       <div class="item">
-        <img src="https://s-media-cache-ak0.pinimg.com/originals/69/ff/c5/69ffc5ac8e50cd4f4b581187d94def69.jpg" alt="New york" width="600px" height="500px"  class="img-responsive">
+        <img src="{% static 'img/cute_child.jpg' %}" min-height="500px" width="600px" class="img-responsive">
+      </div>
+       <div class="item">
+        <img src="{% static 'img/vegetables.jpg' %}" min-height="500px" width="600px" class="img-responsive">
+      </div>
+       <div class="item">
+        <img src="{% static 'img/programming_girl.jpg' %}" min-height="500px" width="600px" class="img-responsive">
       </div>
     </div>
 

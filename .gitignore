@@ -8,6 +8,7 @@ vir_env
 db.sqlite3
 /static
 .DS_Store
+v.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
