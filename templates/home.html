@@ -54,14 +54,34 @@
     <script>
         var app = angular.module('myApp', []);
         app.controller('customersCtrl', function($scope, $http) {
-          $http.get("https://api.github.com/users/hygull/gists").then(function (response) {
-              $scope.myDataList = response.data;
-              var list = response.data;
-              console.log(list)
-              // console.log("Now...")
-              // console.log(list[0].files["filename"])
-
-          });
+          var i = 1
+          // var list = []
+          $scope.myDataList = []
+          $scope.justContinue = true
+          // var justContinue = true
+          while(true){
+            console.log("Entered")
+            $http.get("https://api.github.com/users/hygull/gists?pages="+i).then(function (response) {
+                  // console.log("DATA",$scope.myDataList)
+                  $scope.myDataList =  $scope.myDataList.concat( response.data );
+                  // list = response.data
+                  // if(response.data.length==0){
+                  //   $scope.justContinue=false
+                  // }
+                  // console.log($scope.myDataList)
+                  console.log(i,"time:",$scope.myDataList.length)    
+            });
+            // if(list.length==0){
+            //       console.log("exiting")
+            //       justContinue = false
+            // } 
+            // console.log("response", res)
+            if(i==5){
+              break
+            }
+            i = i + 1
+          }
+          console.log("exiting")
         });
     </script>
     {% endblock %}
