@@ -3,13 +3,14 @@ from django.contrib import admin
 from django.conf import settings #Added
 from django.conf.urls.static import static #Added 
 from rest_framework import routers
-from HyGoApp.api.viewsets import VideoViewSet, TechnicalVideoViewSet
+from HyGoApp.api.viewsets import VideoViewSet, TechnicalVideoViewSet, ProductViewSet
 
 # Rest API related url conf (START)
 router = routers.DefaultRouter()
 router.register("videos", VideoViewSet)
 router.register("technical-videos", TechnicalVideoViewSet)
-    
+router.register("products", ProductViewSet)
+
 # END 
 urlpatterns = [
     # Rest API

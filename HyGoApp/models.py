@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 class SignUp(models.Model):
@@ -45,3 +46,15 @@ class Markdown(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class Product(models.Model):
+	""" Product model """
+	title = models.CharField(max_length=500, blank=False)
+	image = models.TextField(blank=False)
+	price = models.FloatField(blank=False)
+	stock_status = models.IntegerField(validators=[MaxValueValidator(1), MinValueValidator(0)], blank=False)
+	target_url = models.TextField(blank=False)
+	merchant = models.CharField(max_length=5,blank=False)
+
+	def __unicode__(self):
+		return self.title
