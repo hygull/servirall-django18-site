@@ -58,3 +58,6 @@ class Product(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+class Click(models.Model):
+	clicks = models.BigIntegerField()

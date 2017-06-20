@@ -3,6 +3,7 @@ from django.conf import settings
 from .forms import SignUpForm,LoginForm,PostForm,VideoForm, VideoVirtualRealityForm
 from .models import Post,Video,Markdown,VideoVirtualReality
 from django.core.mail import send_mail
+from .models import Click
 # Create your views here.
 
 def rscript(request):
@@ -56,6 +57,17 @@ def home(request):
 	else:
 		request.user="Dear visitor"
 	context={"title":title,"username":username,"login_url_link_as_list":login_url_link_as_list,"logout_url_link_as_list":logout_url_link_as_list}
+	
+	try:
+		clicks = Click.objects.get(id=1)
+		clicks.clicks = clicks.clicks + 1
+		clicks.save()
+		print clicks, clicks.id, clicks.clicks
+		context["clicks"] = clicks.clicks
+	except:
+		Click.objects.create(clicks=1)
+		context["clicks"] = 1
+		print "Set clicks to 1"
 	return render(request,"home.html",context)
 
 def login(request):#Model Form
