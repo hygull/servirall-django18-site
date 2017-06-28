@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 class SignUp(models.Model):
@@ -61,3 +62,30 @@ class Product(models.Model):
 
 class Click(models.Model):
 	clicks = models.BigIntegerField()
+
+
+def validate_discount(value):
+	if value < 0.0:
+		raise ValidationError("discount should be positive")
+
+class FishImage(models.Model):
+	""" A class that defines the structure of User object """
+	COLOR_CHOICES = (
+	    (1, 'Type1'),
+	    (2, 'Type2'),
+	    (3, 'Type3'),
+	    (4, 'Type4'),
+	    (5, 'Type5'),
+	    (6, 'Type6'),
+	    (7, "Other"),
+	)
+
+	flesh_name = models.CharField(max_length=50, blank=False)	#Required
+	flesh_type = models.CharField(max_length=50, blank=False)
+	flesh_pic = models.ImageField(default="https://en.wikipedia.org/wiki/List_of_types_of_seafood#/media/File:Squilla_mantis_(l%27Ametlla)_brighter_and_quality.jpg", max_length=200)
+	flesh_type = models.IntegerField(choices=COLOR_CHOICES, default='Type0', blank=True)
+	price = models.FloatField(blank=False)
+	discount = models.IntegerField(validators=[validate_discount], default=0, blank=True)
+
+	def __unicode__(self):
+		return self.flesh_name

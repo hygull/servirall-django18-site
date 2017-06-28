@@ -261,6 +261,9 @@ def login_with_google(request):
 	else:
 		return redirect("/login2/")
 
+def more(request):
+	return render(request, "technical.html", {})
+
 
 def scrapped_image_links(request):
 	error = ""

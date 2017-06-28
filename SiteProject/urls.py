@@ -3,13 +3,14 @@ from django.contrib import admin
 from django.conf import settings #Added
 from django.conf.urls.static import static #Added 
 from rest_framework import routers
-from HyGoApp.api.viewsets import VideoViewSet, TechnicalVideoViewSet, ProductViewSet
+from HyGoApp.api.viewsets import VideoViewSet, TechnicalVideoViewSet, ProductViewSet, FishImageViewSet
 
 # Rest API related url conf (START)
 router = routers.DefaultRouter()
 router.register("videos", VideoViewSet)
 router.register("technical-videos", TechnicalVideoViewSet)
 router.register("products", ProductViewSet)
+router.register("fish-images", FishImageViewSet)
 
 # END 
 urlpatterns = [
@@ -29,7 +30,7 @@ urlpatterns = [
     url(r'^error/$', 'HyGoApp.views.error', name='error'),
     url(r"^url/error_msg/","HyGoApp.views.url_error_message",name='url_error_message'),
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r"^hygull/technical-things/$", "HyGoApp.views.more", name="more"),
     url(r"^blogs/$","HyGoApp.views.blogs",name="blogs"),
     url(r"^aboutus/$","HyGoApp.views.aboutus",name="aboutus"),
     url(r"^posts/$","HyGoApp.views.posts",name="posts"),

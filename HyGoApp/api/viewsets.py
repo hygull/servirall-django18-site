@@ -1,6 +1,6 @@
-from .serializers import VideoSerializer,VideoVirtualRealitySerializer, ProductSerializer
+from .serializers import VideoSerializer,VideoVirtualRealitySerializer, ProductSerializer, FishImageSerializer
 from rest_framework import viewsets
-from HyGoApp.models import Video, VideoVirtualReality, Product
+from HyGoApp.models import Video, VideoVirtualReality, Product, FishImage
 
 class VideoViewSet(viewsets.ModelViewSet):
 	""" ViewSet for Videos """
@@ -16,3 +16,8 @@ class ProductViewSet(viewsets.ModelViewSet):
 	""" ViewSet for products data """
 	queryset = Product.objects.all()
 	serializer_class = ProductSerializer
+
+class FishImageViewSet(viewsets.ModelViewSet):
+	""" ViewSet for products data """
+	queryset = FishImage.objects.all()
+	serializer_class = FishImageSerializer

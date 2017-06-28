@@ -1,4 +1,4 @@
-from HyGoApp.models import Video, VideoVirtualReality, Product
+from HyGoApp.models import Video, VideoVirtualReality, Product, FishImage
 from rest_framework import serializers
 
 class VideoSerializer(serializers.HyperlinkedModelSerializer):
@@ -17,4 +17,10 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 	"""Serializer class for flipkart/amazon/wallmart like products """
 	class Meta:
 		model = Product
+		fields = "__all__"
+
+class FishImageSerializer(serializers.HyperlinkedModelSerializer):
+	"""Serializer class for flipkart/amazon/wallmart like products """
+	class Meta:
+		model = FishImage
 		fields = "__all__"
