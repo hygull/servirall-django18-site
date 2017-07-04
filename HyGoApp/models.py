@@ -68,6 +68,12 @@ def validate_discount(value):
 	if value < 0.0:
 		raise ValidationError("discount should be positive")
 
+def validate_description(text):
+	if len(text) < 20 or len(text) > 300:
+		raise ValidationError("Description should have 25-300 characters, You provided %d"%(len(text)))
+
+desc = "Fish are vertebrates which live in water and respire (get oxygen) with gills. They lack limbs with digits (fingers & toes).\nThis is a definition which does not quite work: some amphibia also live in water and have external gills, but they are not fishes."
+
 class FishImage(models.Model):
 	""" A class that defines the structure of User object """
 	COLOR_CHOICES = (
@@ -86,6 +92,7 @@ class FishImage(models.Model):
 	flesh_type = models.IntegerField(choices=COLOR_CHOICES, default='Type0', blank=True)
 	price = models.FloatField(blank=False)
 	discount = models.IntegerField(validators=[validate_discount], default=0, blank=True)
+	description = models.TextField(default=desc, validators=[validate_description], blank=False, null=False)
 
 	def __unicode__(self):
 		return self.flesh_name
