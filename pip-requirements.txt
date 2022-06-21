@@ -20,7 +20,7 @@ markdown2==2.3.4
 mobmsg==0.1
 MySQL-python==1.2.5
 Naked==0.1.31
-numpy==1.13.0
+numpy==1.22.0
 olefile==0.44
 openpyxl==2.4.8
 packaging==16.8
